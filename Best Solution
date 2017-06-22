@@ -1,0 +1,32 @@
+int main()
+{
+       int arr[n];
+       int sum = 0;
+       int leftSum = 0;
+       
+       for(int i = 0; i < n; i++)
+       {
+           cin >> arr[i];
+           sum += arr[i];
+       }
+       
+       int i;
+       
+       for(i = 0; i < n; i++)
+       {
+           sum = sum - arr[i];
+           
+           if(leftSum == sum)
+           {
+               cout << i+1 << endl;
+               break;
+           }
+           
+           leftSum += arr[i];
+       }
+       
+       if(i == n)
+       cout << -1 << endl;
+
+   return 0;
+}
